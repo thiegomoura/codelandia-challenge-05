@@ -65,13 +65,12 @@ header nav ul li {
 
 header nav ul li a svg {
     cursor: pointer;
-    color: #f9f9f9;
-    transition: filter 0.2s;
+    stroke: #f9f9f9;
+    transition: fill 0.2s;
 }
 
 header nav ul li a svg:hover {
-    filter: brightness(0.9);
-    color: #f9f9f9;
+    fill: #628E75;
 }
 
 body {
