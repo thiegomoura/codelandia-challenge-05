@@ -1,5 +1,5 @@
 <p align="center">
-<h1>Desafio 05 - Codelandia</h1>
+<h1>Desafio 05 - Codelândia</h1>
   <p align="center">
     Landing page da estreia de um filme
   </p>
