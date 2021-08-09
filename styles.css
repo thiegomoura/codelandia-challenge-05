@@ -59,6 +59,19 @@ header nav ul {
 header nav ul li {
     list-style: none;
     padding: 8px 16px;
+    transition: height 1s;
+    transition: width 1s;
+}
+
+header nav ul li a svg {
+    cursor: pointer;
+    color: #f9f9f9;
+    transition: filter 0.2s;
+}
+
+header nav ul li a svg:hover {
+    filter: brightness(0.9);
+    color: #f9f9f9;
 }
 
 body {
@@ -74,12 +87,12 @@ body {
 }
 
 main {
-    width: 80vw;
+    /* width: 80vw; */
     background: no-repeat;
     background-image: url('./assets/img/ilustracao.png');
     background-position: right;
     background-size: contain;
-    margin: 3rem 0;
+    margin: 3rem 5rem;
 }
 
 .content {
@@ -118,8 +131,8 @@ main {
     font-family: 'Popping', sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    height: 3rem;
-    width: 100%;
+    height: 3.2rem;
+    width: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -127,11 +140,13 @@ main {
     transform: skew(-15deg);
     -webkit-transform: skew(-15deg);
     -ms-transform: skew(-15deg);
-    position: relative;
+}
+
+.content .content-footer button span i {
+    margin-right: 8px;
 }
 
 .content .content-footer button span {
-    position: absolute;
     transform: skew(15deg);
     -webkit-transform: skew(15deg);
     -ms-transform: skew(15deg);
@@ -144,9 +159,16 @@ main {
     border: 1px solid #628E75;
 }
 
-.content .content-footer button.secundary {
+.content .content-footer button.primary:hover {
+    filter: brightness(0.9);
+}
+.content .content-footer button.secondary {
     background-color: transparent;
     border: 1px solid #f9f9f9;
+}
+
+.content .content-footer button.secondary:hover{
+    background-color: #628E75;
 }
 
 .content .content-footer button+button {
@@ -158,6 +180,9 @@ main {
 @media (max-width: 768px) {}
 
 @media(max-width: 480px) {
+    header {
+        width: 90vw;
+    }
     header nav ul li {
         padding: 4px 8px;
     }
@@ -165,7 +190,7 @@ main {
         background-position: top;
         display: flex;
         flex: 1;
-        margin: 1rem 0;
+        margin: 1rem 1.5rem;
     }
     .content {
         margin: auto 0 2rem;
@@ -173,14 +198,20 @@ main {
     }
     .content h1 {
         font-size: 3.25rem;
-        line-height: 3rem;
+        line-height: 2.8rem;
         padding: 0;
     }
     .content p {
         text-align: justify;
     }
 
-    .content .content-footer button span{
+    .content .content-footer button {
+        width: 75%;
+    }
+    .content .content-footer button.secondary {
+        display: none;
+    }
+    .content .content-footer button span {
         font-size: 1rem;
     }
 }
